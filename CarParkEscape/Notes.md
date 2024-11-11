@@ -32,14 +32,20 @@ Input as 2d-array of ints -> [[1,0,0,0],[0,0,0,0]]
 
 Return list of directions as strings -> ["L2", "D1", "R4"...]
 
+* find start floor
+* for each floor groundfloor
+  * distance to staircase/exit
+  * add direction
+* return directions
+
 1. ~~Sätta upp metodsignatur~~
 2. ~~Testa metod returnvärde, alltså returnerar en string[]~~
-3. Börjar på samma plan som utgång
-    * behöver hitta bilens position
-    * hitta utgången
-    * hitta avståndet mellan bil och utgång
-4. Metod för att hitta index av bilen
+3. ~~Börjar på samma plan som utgång~~
+    ~~* behöver hitta bilens position~~
+    ~~* hitta utgången~~
+    ~~* hitta avståndet mellan bil och utgång~~
+4. ~~Metod för att hitta index av bilen~~
     * med tester
 5. Extrahera "getDirection" metod?
-6. Samma plan annat avstånd
+6. ~~Samma plan annat avstånd~~
 7. Bil och utgång på olika plan

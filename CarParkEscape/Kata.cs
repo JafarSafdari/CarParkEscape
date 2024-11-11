@@ -7,7 +7,7 @@ public class Kata
         if (floorLength == 0)
             return [];
         
-        var startPosition = GetStartPosition(carpark);
+        var (floor, startPosition) = GetStartPosition(carpark);
         
         return ["R" + GetDistance(floorLength, startPosition)];
     }
@@ -17,15 +17,22 @@ public class Kata
         return floorLength - startPosition - 1;
     }
 
-    private static int GetStartPosition(int[,] carpark)
+    private static (int floor, int startPosition) GetStartPosition(int[,] carpark)
     {
         var startPosition = -1;
-        for (var i = 0; i < carpark.GetLength(1); i++)
+        var floor = -1;
+        
+        for (var i = 0; i < carpark.GetLength(0); i++)
         {
-            if (carpark[0, i] == 2)
-                startPosition = i;
+            for (var j = 0; j < carpark.GetLength(1); j++)
+            {
+                if (carpark[i, j] != 2) continue;
+                
+                floor = i;
+                startPosition = j;
+            }
         }
 
-        return startPosition;
+        return (floor, startPosition);
     }
 }
