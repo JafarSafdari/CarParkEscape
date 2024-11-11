@@ -1,5 +1,3 @@
-using System.Reflection;
-
 namespace Test;
 
 public class UnitTest1
@@ -8,8 +6,8 @@ public class UnitTest1
     public void Escape_WhenThereIsNoParking_ShouldReturnEmptyArray()
     {
         //arrange
-        int[,] carpark = new int[,] {{}};
-        string[] expectedResult = new string[] { } ;
+        int[,] carpark = {{}};
+        string[] expectedResult = { } ;
 
         //act
         var result = Kata.escape(carpark);
@@ -34,8 +32,8 @@ public class UnitTest1
         get
         {
 
-            yield return new object[] { new int[,] { { 2, 0 } }, new string [] {"R1"} };
-            yield return new object[] { new int[,] { { 2, 0, 0, 1 } }, new string [] {"R3"} };
+            yield return [new[,] { { 2, 0 } }, new[] {"R1"}];
+            yield return [new[,] { { 2, 0, 0, 1 } }, new[] {"R3"}];
         }
     }
 
