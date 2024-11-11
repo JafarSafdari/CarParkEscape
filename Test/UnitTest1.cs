@@ -33,7 +33,7 @@ public class UnitTest1
         {
 
             yield return [new[,] { { 2, 0 } }, new[] {"R1"}];
-            yield return [new[,] { { 2, 0, 0, 1 } }, new[] {"R3"}];
+            yield return [new[,] { { 2, 0, 0, 0 } }, new[] {"R3"}];
         }
     }
 
